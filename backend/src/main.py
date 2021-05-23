@@ -1,14 +1,8 @@
-from flask import  jsonify, request, Blueprint
-from . import app
-bp = Blueprint('api', __name__,
-                        template_folder='templates')		
+from .application import app as application
 
-@bp.route('/test')
-def get_exams():
-	return jsonify('holi')
+from flask import render_template, request, redirect, make_response, jsonify
 
-@bp.route('/')
-def index():
-	return jsonify("Hello World")
+from .views import *
 
-app.register_blueprint(bp, url_prefix='/api')
+if __name__ == '__main__':
+    application.run()
