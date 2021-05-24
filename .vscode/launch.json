@@ -11,7 +11,7 @@
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_APP": "backend.src.app"
+                "FLASK_APP": "backend.src.main"
             },
             "args": [
                 "run",
